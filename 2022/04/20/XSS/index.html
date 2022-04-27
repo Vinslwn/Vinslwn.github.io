@@ -1,0 +1,564 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Vermouth</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >XSS</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="一、XSS漏洞介绍"><a href="#一、XSS漏洞介绍" class="headerlink" title="一、XSS漏洞介绍"></a>一、XSS漏洞介绍</h2><h3 id="1-XSS漏洞概述"><a href="#1-XSS漏洞概述" class="headerlink" title="1.XSS漏洞概述"></a>1.XSS漏洞概述</h3><p>漏洞的介绍</p>
+<p>XSS又叫cSS (Cross Site Script)，全称跨站脚本攻击。它指的是攻击者往Web页面或者URL里插入恶意JavaScript脚本代码，如果Web应用程序对于用户输入的内容没有过滤，那么当正常用户浏览该网页的时候，嵌入在Web页面里的恶意JavaScript脚本代码会被执行，从而达到恶意攻击正常用户的目的</p>
+<h3 id="2-漏洞的位置"><a href="#2-漏洞的位置" class="headerlink" title="2.漏洞的位置"></a>2.漏洞的位置</h3><p>数据交互的地方:</p>
+<blockquote>
+<p>get post cookies headers方法-富文本编辑器</p>
+</blockquote>
+<blockquote>
+<p>各类标签插入和自定义</p>
+</blockquote>
+<p>数据输出的地方:</p>
+<blockquote>
+<p>用户资料</p>
+</blockquote>
+<blockquote>
+<p>关键词、标签、说明</p>
+</blockquote>
+<h3 id="3-漏洞的原理："><a href="#3-漏洞的原理：" class="headerlink" title="3.漏洞的原理："></a>3.漏洞的原理：</h3><p>XSS，是指攻击者通过在Web页面中写入恶意脚本，造成用户在浏览页面时，获取控制用户浏览器进行操作的攻击方式</p>
+<h3 id="4-XSS漏洞产生的两个条件："><a href="#4-XSS漏洞产生的两个条件：" class="headerlink" title="4.XSS漏洞产生的两个条件："></a>4.XSS漏洞产生的两个条件：</h3><blockquote>
+<p>可以控制的输入点</p>
+</blockquote>
+<blockquote>
+<p>输入能返回到前端页面上被浏览器当成脚本语言解释执行</p>
+</blockquote>
+<h3 id="5-漏洞的危害"><a href="#5-漏洞的危害" class="headerlink" title="5.漏洞的危害"></a>5.漏洞的危害</h3><blockquote>
+<p>窃取用户Cookie，冒充用户身份进入网站(常见)</p>
+</blockquote>
+<blockquote>
+<p>键盘记录</p>
+</blockquote>
+<blockquote>
+<p>客户端信息探查</p>
+</blockquote>
+<blockquote>
+<p>xss getshell</p>
+</blockquote>
+<blockquote>
+<p>劫持用户会话，执行任意操作</p>
+</blockquote>
+<blockquote>
+<p>刷流量，执行弹窗广告</p>
+</blockquote>
+<blockquote>
+<p>传播蠕虫病毒</p>
+</blockquote>
+<h3 id="6-漏洞的防御"><a href="#6-漏洞的防御" class="headerlink" title="6.漏洞的防御"></a>6.漏洞的防御</h3><p>①使用XSS Filter</p>
+<p>XSS Filter 的作用是过滤用用户（客户端）提交的有害信息，从而达到防范XSS攻击的效果</p>
+<p>②输入过滤</p>
+<p>“永远不要相信用户的输入”，对于用户输入一定要过滤。</p>
+<p>③输入验证</p>
+<p>对用户提交的信息进行有效验证(是否仅包含合法字符、字符串长度限制、输入是否符合特殊的格式要求等等)</p>
+<p>④输出编码</p>
+<p>HTML编码主要是用对应的HTML 实体代替字符</p>
+<h3 id="7-检测XSS的方法"><a href="#7-检测XSS的方法" class="headerlink" title="7.检测XSS的方法"></a>7.检测XSS的方法</h3><p>检测XSS一般分为两种方式，一种是手工检测，另一种是软件自动检测，两者各有利弊，使用手工检测时，检测结果精准，但对于一个较大的web应用或，手工检测是件非常困难的事情，而使用软件自动检测的时，虽然方便，却存在误报，或是有些隐蔽的XSS无法检测出</p>
+<p>（1）手工检测</p>
+<p>使用手工检测XSS漏洞是否存在时，最重要考虑的是哪里有输入、输入的数据在什么地方输出</p>
+<p>①可得知输出位置</p>
+<p>输入一些敏感字符，例如&lt;、&gt;、”、’、()等，请求后查看HTML源码，看这些输入的字符是否被转义</p>
+<p>②无法得知输入位置</p>
+<p>非常多的web应用程序源代码不对外公开，这时在测试XSS时就有可能无法得知输入数据到底在何处显示，比如，测试某留言板是否存在XSS，那么在留言之后，可能需要经过管理员的审核才能显示，这时无法得知输入的数据在后台管理页面处于什么状态</p>
+<p>（2）全自动检测XSS</p>
+<p>①APPSCAN、AWVS、Burp Suite等软件，都可以有效地检测XSS漏洞，但这类大型的漏扫工具除了检测XSS外，还会检测SQL注入、文件包含等漏洞，所以效率比较低</p>
+<p>②专业的XSS扫描工具可以更准确的扫描XSS漏洞，如:XSSER、XSSF。也有白帽子自己写的扫描XSS漏洞的web服务，如:<a target="_blank" rel="noopener" href="http://www.domxssscanner.com/%EF%BC%8C%E4%B8%93%E9%97%A8%E7%94%A8%E6%9D%A5%E6%89%AB%E6%8F%8FDOM%E5%9E%8BXSS">http://www.domxssscanner.com/，专门用来扫描DOM型XSS</a></p>
+<p>③工具与手动相结合，才能更好地检测XSS，比如:在扫描XSS时，很多扫描器一般无法检测非常规的XSS漏洞，因为在提交留言时可能需要短信验证，验证码填写等，这是工具无法做到的</p>
+<h2 id="二、XSS漏洞分类"><a href="#二、XSS漏洞分类" class="headerlink" title="二、XSS漏洞分类"></a>二、XSS漏洞分类</h2><h3 id="1-漏洞的分类"><a href="#1-漏洞的分类" class="headerlink" title="1.漏洞的分类"></a>1.漏洞的分类</h3><p>根据攻击手法的不同，XSS漏洞分为三类</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储区</th>
+<th>插入点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>反射型XSS</td>
+<td>URL</td>
+<td>HYML</td>
+</tr>
+<tr>
+<td>存储型XSS</td>
+<td>后端数据库</td>
+<td>HTML</td>
+</tr>
+<tr>
+<td>DOM型XSS</td>
+<td>后端数据库&#x2F;前端存储&#x2F;URL</td>
+<td>前端JavaScript</td>
+</tr>
+</tbody></table>
+<h3 id="2-反射型XSS"><a href="#2-反射型XSS" class="headerlink" title="2.反射型XSS"></a>2.反射型XSS</h3><p>概念∶是非持久性、参数型的跨站脚本。反射型XSS的JS代码在Web应用的参数（变量)中，如搜索框的反射型XSS</p>
+<p>存在位置∶常见于通过URL传递参数的功能，如网站搜索、跳转等</p>
+<p>攻击手法∶需要欺骗用户自己去点击链接才能触发XSS代码（服务器中没有这样的页面和内容），一般容易出现在搜索页面</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/1.png" alt="1"></p>
+<p>验证反射型xss漏洞存在的poc :</p>
+<blockquote>
+<p>&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;（常用)</p>
+</blockquote>
+<blockquote>
+<p>&lt;script&gt; confirm(‘xss’)&lt;&#x2F;script&gt;</p>
+</blockquote>
+<blockquote>
+<p>&lt;script&gt;prompt(‘xss’)&lt;&#x2F;script&gt;</p>
+</blockquote>
+<h3 id="3-存储型XSS"><a href="#3-存储型XSS" class="headerlink" title="3.存储型XSS"></a>3.存储型XSS</h3><p>概念∶持久性跨站脚本，是三种XSS中危害最大的。它是将恶意代码写进数据库或文件等可以永久保存数据的介质中</p>
+<p>存在位置:常出现在留言板、发表评论或发表文章的地方(数据写入的地方)</p>
+<p>攻击手法∶通过留言板等功能，将攻击者精心构造XSS代码，保存到数据库中，当其他用户再次访问这个页面时，就会触发并执行恶意的XSS代码，从而窃取用户的敏感信息</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/2.png" alt="2"></p>
+<p>以留言板为例，留言板是容易发生存储型XSS的地方。</p>
+<p>输入测试代码&lt;script&gt;alert(&#x2F;xsstest&#x2F;)&lt;&#x2F;script&gt;，提交留言，当网站管理员在后台进入留言管理页面时就会弹出xsstest的对话框，只要留言不删掉，每次进入留言管理都会进行弹窗（持久性)</p>
+<h3 id="4-DOM型XSS"><a href="#4-DOM型XSS" class="headerlink" title="4.DOM型XSS"></a>4.DOM型XSS</h3><p>DOM的意思:DOM文档对象模型(Document Objeet Model,DOM)是一个平台和语言都中立的接口，可以使程序和脚本能够动态访问和更新文档的内容、结构以及样式</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/3.png" alt="3"></p>
+<p>漏洞概念∶不经过后端，DOM-XSS漏洞是基于文档对象模型的一种漏洞，简单去理解就是因为输出点在DOM。DOM-XSS是通过url传入参数去控制触发的，其实也属于反射型XSS</p>
+<p>攻击手法︰</p>
+<p>攻击者构造出特殊的URL，其中包含恶意代码。用户打开带有恶意代码的URL</p>
+<p>用户浏览器接收到响应后解析执行，前端JavaScript取出URL 中的恶意代码并执行</p>
+<p>恶意代码窃取用户数据并发送到攻击者的网站，或者冒充用户的行为，调用目标网站接口执行攻击者指定的操作</p>
+<p>常用的DOM方法:</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getElementById()</td>
+<td>返回带有指定ID的元素</td>
+</tr>
+<tr>
+<td>getElementsBy TagName()</td>
+<td>返回包含带有指定标签名称的所有元素的书点列表（集合&#x2F;节点数组)</td>
+</tr>
+<tr>
+<td>getElementsByClassName()</td>
+<td>返回包含带有指定类名的所有元素的节点列表</td>
+</tr>
+<tr>
+<td>appendChild()</td>
+<td>把新的子节点添加到指定节点</td>
+</tr>
+<tr>
+<td>removeChild()</td>
+<td>删除子节点</td>
+</tr>
+<tr>
+<td>replaceChild()</td>
+<td>替换子节点</td>
+</tr>
+<tr>
+<td>insertBefore()</td>
+<td>在指定的子节点前面插入新的子节点</td>
+</tr>
+<tr>
+<td>createAttribute()</td>
+<td>创建属性节点</td>
+</tr>
+<tr>
+<td>createElement</td>
+<td>创建元素节点</td>
+</tr>
+</tbody></table>
+<p>DOM型XSS：</p>
+<p>poc : ?message&#x3D;&lt;\script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;</p>
+<p>以锚点的方式提交poc。poc并不会发送到服务器，但是已经触发了XSS</p>
+<h3 id="5-三种漏洞的区别"><a href="#5-三种漏洞的区别" class="headerlink" title="5.三种漏洞的区别"></a>5.三种漏洞的区别</h3><p>①存储型XSS与反射型XSS的区别</p>
+<p>存储型 XSS 的恶意代码存在数据库里，反射型XSS的恶意代码存在URL里</p>
+<p>②DOM型与其他两种XSS的区别</p>
+<p>DOM型XSS攻击中，取出和执行恶意代码由浏览器端完成，属于前端JavaScript自身的安全漏洞，而其他两种XSS都属于服务端的安全漏洞</p>
+<h2 id="三、XSS简单利用"><a href="#三、XSS简单利用" class="headerlink" title="三、XSS简单利用"></a>三、XSS简单利用</h2><h3 id="1-XSS的简单利用有哪些"><a href="#1-XSS的简单利用有哪些" class="headerlink" title="1.XSS的简单利用有哪些"></a>1.XSS的简单利用有哪些</h3><p>①XSS获取管理员权限(获取cookie) ——重要</p>
+<p>②XSS键盘记录———重要</p>
+<p>③XSS获取内网IP</p>
+<h3 id="2-XSS获取cookie"><a href="#2-XSS获取cookie" class="headerlink" title="2.XSS获取cookie"></a>2.XSS获取cookie</h3><p>cookie的介绍∶指某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的数据</p>
+<p>cookie的作用:它可以记录用户ID、密码、停留时间等等，当再次访问这个网站时，浏览器会自动监这个文件，并将存储在本地的Cookie信息发送给网站，网站通过读取Cookie，得知相关信息，就可以做出相应的动作，比如∶直接登陆，无需再次输入账号和密码</p>
+<p>获取cookie的危害:窃取用户Cookie，冒充用户身份进入网站</p>
+<p>cookie的格式:Cookie有变量名（ key )和值 ( value )组成，属性中的变量用“变量&#x3D;值”的形式保存</p>
+<p>Set-Cookie:&lt;name&gt;&#x3D; &lt;value&gt;[; &lt;name&gt;&#x3D;&lt;value&gt;]…</p>
+<p>[; expires&#x3D;&lt;date&gt;][; domain&#x3D;<domain_name>]</p>
+<p>[; path&#x3D;<some_path>][; secure][; httponly]</p>
+<h2 id="四、XSS的变形与绕过"><a href="#四、XSS的变形与绕过" class="headerlink" title="四、XSS的变形与绕过"></a>四、XSS的变形与绕过</h2><h3 id="1-XSS变形的概述"><a href="#1-XSS变形的概述" class="headerlink" title="1.XSS变形的概述"></a>1.XSS变形的概述</h3><p>（1）为什么要进行变形</p>
+<p>不同的网站会采取不同的过滤机制，有的网站会对XSS攻击中的敏感函数进行过滤，所以通过学习XSS的变形，可以绕过一些过滤机制</p>
+<p>（2）XSS的构造</p>
+<p>①利用&lt;&gt;构造HTML&#x2F;JS</p>
+<p>可以利用&lt;&gt;构造HTML标签和&lt;script&gt;标签</p>
+<p>举例:</p>
+<p>提交&lt;img src&#x3D;”.&#x2F;smile.jpg”&gt;,构造html语言，得到图片</p>
+<p>②伪协议的方式构造XSS</p>
+<p>可以使用javascript:伪协议的方式构造XSS ,html标签支持js伪协议形式，如src , href , background等</p>
+<p>形式:javascript:alert(&#x2F;xss&#x2F;);</p>
+<p>举例:利用href标签的伪协议&lt;a href&#x3D;”javascript:alert(&#x2F;xss&#x2F;)”&gt;touch me!&lt;&#x2F;a&gt;</p>
+<blockquote>
+<p>通过href标签创建超链接，并通过伪协议进行xss攻击，所以点击了超链接就会进行弹窗操作</p>
+</blockquote>
+<p>③事件利用</p>
+<p>可以利用html中某些动作事件，绑定恶意脚本。这是一种比较经典的编程思想。在网页中会发生很多事件（比如鼠标移动，键盘输入等），JS可以对这些事件进行响应。所以我们可以通过事件触发JS函数，再触发XSS</p>
+<p>常见事件类型：</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>windows事件</td>
+<td>对windows对象触发的事件</td>
+</tr>
+<tr>
+<td>Form事件</td>
+<td>HTML 表单内的动作触发事件</td>
+</tr>
+<tr>
+<td>Keyboard事件</td>
+<td>键盘按键</td>
+</tr>
+<tr>
+<td>Mouse事件</td>
+<td>由鼠标或类似用户动作触发的事件</td>
+</tr>
+<tr>
+<td>Media事件</td>
+<td>由多媒体触发的事件</td>
+</tr>
+</tbody></table>
+<p>举例：</p>
+<p>&lt;img src&#x3D;’.&#x2F;smile.jpg’ onmouseover&#x3D;’alert(&#x2F;xss&#x2F;)’&gt;这个标签会引入一个图片，然后鼠标悬停在图片上的时候，触发XSS代码。</p>
+<p>其他事件利用：</p>
+<p>&lt;input type&#x3D;”text” onkeydown&#x3D;”alert(&#x2F;xss&#x2F;)”&gt;当按下键盘任意一个按键的时候触发</p>
+<p>&lt;input type&#x3D;“text” onkeyup&#x3D; “alert(&#x2F;xss&#x2F;)” &gt;当松开键盘任意一个按键的时候触发</p>
+<p>&lt;input type&#x3D;”button” onclick&#x3D;”alert(&#x2F;xss&#x2F;)”&gt;当点击按钮时触发</p>
+<p>&lt;img src&#x3D; ‘#’ onerror&#x3D; ‘alert(&#x2F;xss&#x2F;)’&gt;当img图片载入报错时触发</p>
+<p>④利用CSS出发XSS（过时）</p>
+<p>我们可以利用CSS(层叠样式脚本）触发XSS。但是这种方法比较古老，基本上不适合现在主流的浏览器，但是从学习的角度，我们需要了解这种类型的XSS。以下代码均在IE6下测试。</p>
+<p>行内样式</p>
+<p>&lt;div style&#x3D;”background-image:url(javascript:alert(&#x2F;xss&#x2F;))”&gt;</p>
+<p>页内样式</p>
+<p>&lt;style&gt;Body{background-image:url(javascriptalert(&#x2F;xss&#x2F;))&lt;&#x2F;style&gt;</p>
+<p>外部样式</p>
+<p>&lt;link rel&#x3D;”stylesheet” type&#x3D;”text&#x2F;css” href&#x3D;”.&#x2F;xss.css”&gt;&lt;div&gt;hello&lt;div&gt;</p>
+<p>⑤其他标签以及手法</p>
+<p>随着前端语言的更新和发展，会有新的标签和事件出现，所以前端的安全是个讨论不完的问题</p>
+<p>&lt;svg onload&#x3D;”alert(&#x2F;xss&#x2F;)”&gt; svg是H5语言中的标签，配合事件可以触发XSS</p>
+<p>svg是H5语言中的标签，配合事件可以触发XSS</p>
+<p>&lt;input onfocus&#x3D;alert(&#x2F;xss&#x2F;) autofocus&gt;</p>
+<p>onfocus事件是input标签中的新增事件，这个事件是当input输入框获取焦点时执行一段JS代码，从而触发XSS</p>
+<h3 id="2-XSS的变形"><a href="#2-XSS的变形" class="headerlink" title="2.XSS的变形"></a>2.XSS的变形</h3><p>(1)大小写转换</p>
+<p>可以将payload进行大小写转化</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/4.png" alt="4"></p>
+<p>(2)引号的使用</p>
+<p>HTML语言中对引号的使用不敏感,但是过滤函数对引号很严格</p>
+<p>&lt;img src&#x3D;”#” onerror&#x3D;”alert(&#x2F;xss&#x2F;)” &#x2F;&gt;</p>
+<p>&lt;img src&#x3D;’#’ onerror&#x3D;’alert(&#x2F;xss&#x2F;)’&#x2F;&gt;</p>
+<p>&lt;img src&#x3D;# onerror&#x3D;alert(&#x2F;xss&#x2F;) &#x2F;&gt;</p>
+<p>(3)左斜线[&#x2F;]代替空格</p>
+<p>可以利用左斜线代替空格</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/5.png" alt="5"></p>
+<p>(4)回车的使用</p>
+<p>可以在一些位置添加水平制表符和回车符，来绕过关键字检测</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/6.png" alt="6"></p>
+<p>(5)对标签属性值进行转码</p>
+<p>可以对标签属性值进行转码，用来绕过过滤。对应编码如下</p>
+<table>
+<thead>
+<tr>
+<th>字母</th>
+<th>ASCII码</th>
+<th>十进制编码</th>
+<th>十六进制编码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>97</td>
+<td>&amp;#97;</td>
+<td>&amp;#x61;</td>
+</tr>
+<tr>
+<td>e</td>
+<td>101</td>
+<td>&amp;#101;</td>
+<td>&amp;#x65;</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/7.png" alt="7"></p>
+<p> 另外，可以将以下字符插入到任意位置</p>
+<table>
+<thead>
+<tr>
+<th>Tab（水平制表符）</th>
+<th>&amp;#9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>换行</td>
+<td>&amp;#10</td>
+</tr>
+<tr>
+<td>回车</td>
+<td>&amp;#13</td>
+</tr>
+</tbody></table>
+<p>可以将以下字符插入到头部位置（SOH、STX为控制字符）</p>
+<table>
+<thead>
+<tr>
+<th>SOH</th>
+<th>&amp;#1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>STX</td>
+<td>&amp;#2</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/8.png" alt="8"></p>
+<p>(6)拆分跨站</p>
+<p>当应用程序没有过滤XSS关键字符(如&lt;、&gt;)却对输入字符长度有限制的情况下，如何使用“拆分法”执行跨站脚本代码</p>
+<p>拆分跨站的使用：</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/9.png" alt="9"></p>
+<p>(7)双写绕过</p>
+<p>有些网站只对敏感词汇进行一次过滤，所以使用双写就可以绕过该过滤机制</p>
+<p><img src="https://raw.githubusercontent.com/Vinslwn/img/main/XSS%E7%AC%94%E8%AE%B0/10.png" alt="10"></p>
+<p>(8)CSS中的变形（了解）</p>
+<p>使用全角字符</p>
+<p>width: e x p r e s s i o n(alert(&#x2F;xss&#x2F;))</p>
+<p>注释会被浏览器忽略</p>
+<p>width:expr&#x2F;*<del>*&#x2F;ession(alert(&#x2F;x</del>s~s&#x2F;))</p>
+<p>样式表中的[]和[\0]</p>
+<p>&lt;style&gt;@import ‘javasclri\Optalert(“xss”);&lt;&#x2F;style&gt;</p>
+<h2 id="五、XSS进阶"><a href="#五、XSS进阶" class="headerlink" title="五、XSS进阶"></a>五、XSS进阶</h2><h3 id="1-Beef的使用"><a href="#1-Beef的使用" class="headerlink" title="1.Beef的使用"></a>1.Beef的使用</h3><p>Beef的介绍</p>
+<p>一款浏览器攻击框架，用Ruby语言开发的，Kali中默认安装的一个模块，用于实现对XSS漏洞的攻击和利用</p>
+<p>Beed实现原理</p>
+<p>BeEF主要是往网页中插入一段名为hook,js的JS脚本代码，如果浏览器访问了有hook,js(钩子)的页面，就会被钩住，勾连的浏览器会执行初始代码返回一些信息，接着目标主机会每隔一段时间（默认为1秒）就会向BeEF服务器发送一个请求，询问是否有新的代码需要执行。BeEE服务器本质上就像一个Web应用，被分为前端和后端。前端会轮询后端是否有新的数据需要更新，同时前端也可以向后端发送指示，BeEE持有者可以通过浏览器来登录BeEF的后端，来控制前端(用户的浏览器)</p>
+<p>BeEF一般和XSS漏洞结合使用</p>
+<h2 id="六、XSS水坑攻击"><a href="#六、XSS水坑攻击" class="headerlink" title="六、XSS水坑攻击"></a>六、XSS水坑攻击</h2><p>水坑攻击概念∶</p>
+<p>水坑攻击是一种看似简单但是成功率较高的网络攻击方式</p>
+<p>攻击目标:特定的团体，组织、行业、地区等</p>
+<p>攻击方法∶攻击者首先通过猜测（或观察）确定这组目标经常访问的网站，然后入侵其中一个或多个网站，植入恶意软件。在目标访问该网站时，会被重定向到恶意网址或触发恶意软件执行，导致该组目标中部分成员甚至全部成员被感染</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2022/04/20/XSS/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/04/20/XSS/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a target="_blank" rel="noopener" href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
